@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar column -->
+        <div class="col-md-3">
+            {% include 'employee_sidebar.html' %}
+        </div>
+
+        <!-- Main content column -->
+        <div class="col-md-9">
+            <h2 class="mb-4">
+                Welcome, {{ employee.name }}
+            </h2>
+
+            <!-- Summary Cards -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h6>Employee ID</h6>
+                            <h4>{{ employee.employee_id }}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h6>Department</h6>
+                            <h4>{{ employee.department.name }}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h6>Designation</h6>
+                            <h4>{{ employee.designation.name }}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end main content -->
+    </div> <!-- end row -->
+</div> <!-- end container -->
+{% endblock %}
